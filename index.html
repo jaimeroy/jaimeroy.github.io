@@ -74,7 +74,8 @@
 
   /* HERO */
   .hero {
-    height: 560px;
+    min-height: 100vh;
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 72px;
@@ -186,14 +187,14 @@
     position: relative;
     overflow: hidden;
     background: var(--sand);
-    height: 560px;
+    
   }
 
   .hero-right img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center bottom;
+    object-position: center 40%;
     display: block;
     filter: saturate(0.3) sepia(0.4) brightness(0.95);
   }
@@ -489,7 +490,7 @@
   .about-photo img {
     width: 100%; height: 100%;
     object-fit: cover;
-    object-position: center 15%;
+    object-position: center 20%;
     display: block;
     filter: saturate(0.3) sepia(0.4) brightness(0.95);
   }
@@ -637,7 +638,8 @@
   /* RESPONSIVE */
   @media (max-width: 960px) {
     nav { padding: 1rem 1.5rem; }
-    .hero { grid-template-columns: 1fr; min-height: 560px; }
+    .hero {
+    min-height: 100vh; grid-template-columns: 1fr; min- }
     .hero-left { padding: 5rem 1.5rem 3rem; }
     .hero-right { height: 55vw; min-height: 280px; }
     .hero-stats { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -708,7 +710,7 @@
   </div>
 
   <div class="hero-right">
-    <img src="IMG_4263.jpeg" alt="Jaime D'Urso Roy at the California coast at sunset">
+    <img src="IMG_5088.jpeg" alt="Jaime D'Urso Roy at the California coast at sunset">
   </div>
 </div>
 
@@ -869,7 +871,7 @@
 <section id="about" style="padding:0;">
   <div class="about-grid">
     <div class="about-photo">
-      <img src="IMG_0975.jpeg" alt="Jaime D'Urso Roy traveling in Lisbon, Portugal">
+      <img src="IMG_7707.jpg" alt="Jaime D'Urso Roy">
     </div>
     <div class="about-content">
       <div class="section-label">About</div>
