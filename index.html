@@ -187,7 +187,7 @@
     position: relative;
     overflow: hidden;
     background: var(--sand);
-    
+    max-height: 75vh;
   }
 
   .hero-right img {
@@ -203,7 +203,11 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(253,252,249,0.12) 0%, transparent 35%);
+    background: 
+      linear-gradient(to right, rgba(253,252,249,0.3) 0%, transparent 20%),
+      linear-gradient(to left, rgba(253,252,249,0.5) 0%, transparent 25%),
+      linear-gradient(to bottom, rgba(253,252,249,0.4) 0%, transparent 20%),
+      linear-gradient(to top, rgba(253,252,249,0.8) 0%, transparent 30%);
     pointer-events: none;
   }
 
@@ -243,9 +247,62 @@
     font-size: 1rem;
     font-weight: 300;
     color: var(--ink-mid);
-    max-width: 560px;
+    max-width: 100%;
     line-height: 1.8;
     margin-bottom: 3.5rem;
+  }
+
+  .projects-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+    margin-bottom: 3.5rem;
+  }
+
+  .projects-header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .projects-header-stat {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 0.5px solid var(--sand-dark);
+  }
+
+  .projects-header-stat:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .projects-header-stat .stat-num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 3rem;
+  }
+
+  .projects-header-stat .stat-text {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--ink-mid);
+    line-height: 1.6;
+  }
+
+  .projects-header-stat .stat-text strong {
+    display: block;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+    font-size: 0.85rem;
   }
 
   /* PROJECTS */
@@ -717,8 +774,26 @@
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-label">Selected Work</div>
-  <h2 class="section-title">Where strategy meets<br>measurable impact.</h2>
-  <p class="section-intro">Four distinct proof points across revenue transformation, organizational design, operational infrastructure, and AI-enabled growth.</p>
+  <div class="projects-header">
+    <div class="projects-header-left">
+      <h2 class="section-title">Where strategy meets<br>measurable impact.</h2>
+      <p class="section-intro">Four distinct proof points across revenue transformation, organizational design, operational infrastructure, and AI-enabled growth.</p>
+    </div>
+    <div class="projects-header-right">
+      <div class="projects-header-stat">
+        <span class="stat-num">01—04</span>
+        <div class="stat-text"><strong>Revenue Transformation</strong>Turning transactional engagements into long-term partnerships</div>
+      </div>
+      <div class="projects-header-stat">
+        <span class="stat-num">↗</span>
+        <div class="stat-text"><strong>Organizational Design</strong>Building and scaling teams from the ground up — twice</div>
+      </div>
+      <div class="projects-header-stat">
+        <span class="stat-num">⬡</span>
+        <div class="stat-text"><strong>AI & Operations</strong>Automating workflows and designing adoption programs that stick</div>
+      </div>
+    </div>
+  </div>
 
   <div class="projects-grid">
 
