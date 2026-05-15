@@ -381,25 +381,27 @@
   }
 
   .metric {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
+    display: block;
     font-size: 0.78rem;
     color: var(--ink-mid);
-    line-height: 1.5;
+    line-height: 1.6;
+    padding-left: 1.25rem;
+    position: relative;
   }
 
   .metric::before {
-    content: '';
-    display: block;
-    width: 14px;
-    height: 0.5px;
-    background: var(--gold);
-    flex-shrink: 0;
-    margin-top: 0.6rem;
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.7rem;
+    top: 0.1rem;
   }
 
-  .metric strong { color: var(--ink); font-weight: 500; }
+  .metric strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
 
   .metric {
     display: flex;
@@ -843,7 +845,7 @@
       <h3>From one-off engagements to multi-year partnerships</h3>
       <p>Led productization efforts at two companies, transforming how services were packaged and delivered. The result: clients moved from one-off engagements to multi-year transformation agreements.</p>
       <div class="project-metrics">
-        <div class="metric"><strong>10× revenue</strong> per client through structured productization</div>
+        <div class="metric"><strong>10× revenue</strong> per client through structured productization &amp; standardization</div>
         <div class="metric"><strong>Repeatable</strong> across two separate companies — a methodology, not a moment</div>
         <div class="metric"><strong>Enabled</strong> accurate product costing, pricing, and sales positioning</div>
       </div>
