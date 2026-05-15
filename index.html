@@ -381,12 +381,13 @@
   }
 
   .metric {
-    display: block;
+    display: block !important;
     font-size: 0.78rem;
     color: var(--ink-mid);
     line-height: 1.6;
-    padding-left: 1.25rem;
+    padding-left: 1.1rem;
     position: relative;
+    margin-bottom: 0.4rem;
   }
 
   .metric::before {
@@ -395,12 +396,12 @@
     left: 0;
     color: var(--gold);
     font-size: 0.7rem;
-    top: 0.1rem;
   }
 
   .metric strong {
     color: var(--ink);
     font-weight: 500;
+    display: inline;
   }
 
   .metric {
