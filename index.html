@@ -307,31 +307,34 @@
   }
 
   /* PROJECTS */
-  #projects { background: var(--white); }
+  #projects { background: var(--white); padding: 6rem 2rem; }
 
   .projects-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--sand-dark);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
     border: 0.5px solid var(--sand-dark);
   }
 
   .project-card {
     background: var(--white);
-    padding: 3rem;
+    padding: 2.5rem 1.75rem;
     transition: background 0.3s;
+    border-right: 0.5px solid var(--sand-dark);
+    display: flex;
+    flex-direction: column;
   }
 
+  .project-card:last-child { border-right: none; }
   .project-card:hover { background: var(--sand); }
 
   .project-num {
     font-family: var(--serif);
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 300;
     color: var(--sand-dark);
     line-height: 1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     transition: color 0.3s;
   }
 
@@ -339,40 +342,64 @@
 
   .project-tag {
     display: inline-block;
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 500;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--accent);
     background: var(--accent-light);
-    padding: 0.3rem 0.75rem;
+    padding: 0.25rem 0.65rem;
     margin-bottom: 1rem;
+    align-self: flex-start;
   }
 
   .project-card h3 {
     font-family: var(--serif);
-    font-size: 1.6rem;
+    font-size: 1.15rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     color: var(--ink);
     margin-bottom: 1rem;
   }
 
   .project-card p {
-    font-size: 0.92rem;
+    font-size: 0.83rem;
     font-weight: 300;
     color: var(--ink-mid);
-    line-height: 1.8;
-    margin-bottom: 1.25rem;
+    line-height: 1.75;
+    margin-bottom: 0;
+    flex-grow: 1;
   }
 
   .project-metrics {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.6rem;
     padding-top: 1.25rem;
+    margin-top: 1.5rem;
     border-top: 0.5px solid var(--sand-dark);
   }
+
+  .metric {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--ink-mid);
+    line-height: 1.5;
+  }
+
+  .metric::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 0.5px;
+    background: var(--gold);
+    flex-shrink: 0;
+    margin-top: 0.6rem;
+  }
+
+  .metric strong { color: var(--ink); font-weight: 500; }
 
   .metric {
     display: flex;
@@ -536,11 +563,11 @@
   }
 
   /* ABOUT */
-  #about { background: var(--sand); padding: 5rem 4rem; }
+  #about { background: var(--sand); padding: 6rem 4rem 5rem; }
 
   .about-grid {
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 360px 1fr;
     gap: 4rem;
     align-items: center;
     max-width: 1100px;
@@ -549,8 +576,8 @@
 
   .about-photo {
     position: relative;
-    width: 260px;
-    height: 260px;
+    width: 340px;
+    height: 340px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
@@ -718,7 +745,8 @@
       padding-left: 0; padding-top: 1.5rem;
     }
     section { padding: 4rem 1.5rem; }
-    .projects-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr 1fr; }
+    .project-card { border-right: none; border-bottom: 0.5px solid var(--sand-dark); }
     .ai-capabilities { grid-template-columns: 1fr 1fr; }
     .about-grid { grid-template-columns: 1fr; text-align: center; }
     .about-photo { width: 200px; height: 200px; margin: 0 auto; }
@@ -812,8 +840,8 @@
     <div class="project-card">
       <div class="project-num">01</div>
       <span class="project-tag">Revenue Transformation</span>
-      <h3>Turning one-off engagements into multi-year partnerships</h3>
-      <p>Across two separate companies, I led productization efforts that transformed how services were packaged, priced, and delivered — mapping the full client journey and aligning delivery to the true value of each product. The result: a fundamentally different revenue model where clients commit to long-term transformation, not one-off workshops.</p>
+      <h3>From one-off engagements to multi-year partnerships</h3>
+      <p>Led productization efforts at two companies, transforming how services were packaged and delivered. The result: clients moved from one-off engagements to multi-year transformation agreements.</p>
       <div class="project-metrics">
         <div class="metric"><strong>10× revenue</strong> per client through structured productization</div>
         <div class="metric"><strong>Repeatable</strong> across two separate companies — a methodology, not a moment</div>
@@ -824,8 +852,8 @@
     <div class="project-card">
       <div class="project-num">02</div>
       <span class="project-tag">Organizational Design</span>
-      <h3>Scaling a client success function from three people to a global team</h3>
-      <p>At two companies, I inherited flat, undefined client success functions and built them into tiered departments — designing roles, compensation, and cross-functional systems from scratch. One team grew from three to twenty-plus people globally, including international recruitment. At another, I rebuilt an eight-person team entirely, staying close to strategic accounts as a player-coach throughout.</p>
+      <h3>Scaling a client success function to a global team</h3>
+      <p>Built and restructured multiple client success organizations — growing globally and rebuilding from scratch, staying close to strategic accounts as a strategic partner or player-coach.</p>
       <div class="project-metrics">
         <div class="metric"><strong>Global</strong> team management including international recruitment and training</div>
         <div class="metric"><strong>Three-tier</strong> department architecture designed from scratch — twice</div>
@@ -836,8 +864,8 @@
     <div class="project-card">
       <div class="project-num">03</div>
       <span class="project-tag">Operational Infrastructure</span>
-      <h3>Building the systems that let a company scale without chaos</h3>
-      <p>As Head of Operations at a scaling GTM consulting firm, I built the operational foundation from the ground up — process documentation, systems and tooling, team structure, and people strategy. Proactive infrastructure, not reactive management: standing up what didn't exist so the business could grow into it, including launching a new business unit to test an emerging market.</p>
+      <h3>Building systems that let a company scale without chaos</h3>
+      <p>Built the operational foundation at scaling firms — process, systems, team structure, and people strategy including capacity modeling, client retention strategy, and data driven insights. Proactive infrastructure, not reactive management.</p>
       <div class="project-metrics">
         <div class="metric"><strong>Full operational infrastructure</strong> built where none previously existed</div>
         <div class="metric"><strong>Workforce planning, tooling, and enablement</strong> owned end-to-end</div>
@@ -848,8 +876,8 @@
     <div class="project-card">
       <div class="project-num">04</div>
       <span class="project-tag">AI-Enabled Growth</span>
-      <h3>Designing a company-wide AI adoption program from the ground up</h3>
-      <p>I designed and led a company-wide AI enablement program — structured cohorts, role-specific onboarding, and a six-week curriculum built for non-technical professionals. Alongside this, I drove process automation that collapsed a multi-step manual workflow requiring a dedicated role and multiple meetings into a single automated process that runs in seconds.</p>
+      <h3>Designing a company-wide AI adoption program</h3>
+      <p>Designed and led a company-wide AI enablement program and drove process automation that collapsed a multi-step manual workflow into seconds.</p>
       <div class="project-metrics">
         <div class="metric"><strong>Company-wide</strong> AI adoption program designed and facilitated</div>
         <div class="metric"><strong>Multi-meeting process</strong> collapsed into a single automated workflow</div>
